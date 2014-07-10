@@ -1,4 +1,4 @@
-Copyright (c) 2014 Eugene Kenny
+Copyright (c) 2014 Intercom, Inc.
 
 MIT License
 

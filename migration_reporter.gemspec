@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = MigrationReporter::VERSION
   spec.authors       = ["Eugene Kenny"]
   spec.email         = ["eugene@intercom.io"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Provides a rake task to report Active Record migration details to a given URL.}
+  spec.homepage      = "https://github.com/intercom/migration_reporter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
