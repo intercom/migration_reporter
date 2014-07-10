@@ -1,3 +1,4 @@
+require "migration_reporter/railtie"
 require "migration_reporter/version"
 
 module MigrationReporter
