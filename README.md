@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-    rake migration_reporter:report_migrations[http://my-build-server.com]
+Pass the URL to which the migration details should be reported:
+
+    rake migration_reporter:report_migrations[http://my-build-server.com/migrations]
+
+You can also provide an optional limit parameter, to only report the latest few migrations:
+
+    rake migration_reporter:report_migrations[http://my-build-server.com/migrations,5]
 
 ## Payload format
 

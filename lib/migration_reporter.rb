@@ -3,9 +3,12 @@ require "migration_reporter/version"
 
 module MigrationReporter
   class << self
-    def report_migrations(url)
+    def report_migrations(url, limit=nil)
       paths = ActiveRecord::Migrator.migrations_paths
-      ActiveRecord::Migrator.migrations(paths).each do |migration|
+      migrations = ActiveRecord::Migrator.migrations(paths)
+      migrations = migrations.last(limit.to_i) if limit
+
+      migrations.each do |migration|
         contents = File.read(migration.filename)
         report_migration(url, migration, contents)
       end
